@@ -10,7 +10,7 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="@string/WelcomeTitle"
-        android:id="@+id/textView"
+        android:id="@+id/MenuTitle"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="37dp" />
@@ -19,8 +19,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/SingleUser"
-        android:id="@+id/button"
-        android:layout_below="@+id/textView"
+        android:id="@+id/Single"
+        android:layout_below="@+id/MenuTitle"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="73dp" />
 
@@ -28,7 +28,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/Buzzer"
-        android:id="@+id/button2"
+        android:id="@+id/Buzzer"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true" />
 
@@ -36,8 +36,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/Stat"
-        android:id="@+id/button3"
+        android:id="@+id/Stats"
         android:layout_marginTop="54dp"
-        android:layout_below="@+id/button2"
+        android:layout_below="@+id/Buzzer"
         android:layout_centerHorizontal="true" />
 </RelativeLayout>
