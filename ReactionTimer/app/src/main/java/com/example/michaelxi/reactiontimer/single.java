@@ -4,12 +4,15 @@ package com.example.michaelxi.reactiontimer;
  */
 import android.os.Bundle;
 import android.app.Activity;
+import android.view.MenuItem;
 
-public class single extends Activity{
+public class Single extends Activity{
     @Override
     public void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         //Get the view from single.xml
         setContentView(R.layout.single);
     }
+
+
 }

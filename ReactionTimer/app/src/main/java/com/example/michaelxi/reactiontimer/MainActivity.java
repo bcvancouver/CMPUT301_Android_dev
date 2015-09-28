@@ -28,7 +28,7 @@ public class MainActivity extends Activity{
             // Navigating to another activity.
             public void onClick(View arg0) {
                 //Start single.class
-                Intent myIntent = new Intent(MainActivity.this, single.class);
+                Intent myIntent = new Intent(MainActivity.this, Single.class);
                 startActivity(myIntent);
             }
         });
