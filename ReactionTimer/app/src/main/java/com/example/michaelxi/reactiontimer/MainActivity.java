@@ -22,6 +22,8 @@ public class MainActivity extends Activity{
         //fetched from http://www.androidbegin.com/tutorial/android-button-click-new-activity-example/
         //locate the button in activity_main.xml
         Button Single= (Button) findViewById(R.id.Single);
+        Button Buzzer=(Button) findViewById(R.id.Buzzer);
+        Button Stat=(Button) findViewById(R.id.Stats);
 
         //Capture button clicks.
         Single.setOnClickListener(new Button.OnClickListener() {
@@ -29,6 +31,24 @@ public class MainActivity extends Activity{
             public void onClick(View arg0) {
                 //Start single.class
                 Intent myIntent = new Intent(MainActivity.this, Single.class);
+                startActivity(myIntent);
+            }
+        });
+
+        Buzzer.setOnClickListener(new Button.OnClickListener() {
+            // Navigating to another activity.
+            public void onClick(View arg0) {
+                //Start single.class
+                Intent myIntent = new Intent(MainActivity.this, Buzzer.class);
+                startActivity(myIntent);
+            }
+        });
+
+        Stat.setOnClickListener(new Button.OnClickListener() {
+            // Navigating to another activity.
+            public void onClick(View arg0) {
+                //Start single.class
+                Intent myIntent = new Intent(MainActivity.this, Stat.class);
                 startActivity(myIntent);
             }
         });

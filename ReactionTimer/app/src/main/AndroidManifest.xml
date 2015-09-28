@@ -18,6 +18,10 @@
         </activity>
         <activity android:name=".Single">
         </activity>
+        <activity android:name=".Buzzer">
+        </activity>
+        <activity android:name=".Stat">
+        </activity>
     </application>
 
 </manifest>

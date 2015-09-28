@@ -14,5 +14,4 @@ public class Single extends Activity{
         setContentView(R.layout.single);
     }
 
-
 }
