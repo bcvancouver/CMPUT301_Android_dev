@@ -10,9 +10,16 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 import android.os.Bundle;
 import android.app.Activity;
+import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Toast;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
+import android.support.v7.app.ActionBarActivity;
 
-public class Single extends Activity{
+public class Single extends Activity {
+
     @Override
     public void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);

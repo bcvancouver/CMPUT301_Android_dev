@@ -8,7 +8,9 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 package com.example.michaelxi.reactiontimer;
 
-import android.support.v7.app.AppCompatActivity;
+//import android.support.v7.app.AppCompatActivity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.os.Bundle;
 //fetched from http://www.androidbegin.com/tutorial/android-button-click-new-activity-example/
 import android.app.Activity;
@@ -17,7 +19,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 //fetched from http://www.androidbegin.com/tutorial/android-button-click-new-activity-example/
 import android.view.View;
-import android.view.View.OnClickListener;
+//import android.view.View.OnClickListener;
 import android.widget.Button;
 
 public class MainActivity extends Activity{
@@ -36,10 +38,23 @@ public class MainActivity extends Activity{
         //Capture button clicks.
         Single.setOnClickListener(new Button.OnClickListener() {
             // Navigating to another activity.
+            //Source code was fetched and modified from http://stackoverflow.com/questions/26097513/android-simple-alert-dialog
             public void onClick(View arg0) {
-                //Start single.class
-                Intent myIntent = new Intent(MainActivity.this, Single.class);
-                startActivity(myIntent);
+                AlertDialog SinglePrompt= new AlertDialog.Builder(MainActivity.this).create();
+                SinglePrompt.setTitle("Attention");
+                SinglePrompt.setMessage("Plz wait until you see the Click button");
+                SinglePrompt.setButton(AlertDialog.BUTTON_NEUTRAL, "Continue",
+                        new DialogInterface.OnClickListener(){
+                            public void onClick(DialogInterface dialog,int which){
+                                //Start single.class
+                                Intent myIntent = new Intent(MainActivity.this, Single.class);
+                                startActivity(myIntent);
+                                dialog.dismiss();
+                            }
+                }
+                );
+                SinglePrompt.show();
+
             }
         });
 
