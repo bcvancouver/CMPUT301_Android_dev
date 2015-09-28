@@ -4,7 +4,7 @@
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
     <string name="WelcomeTitle">Welcome to Reaction Timer!</string>
-    <string name="SingleUser">Single-user Mode</string>
+    <string name="SingleUser">Single-User Mode</string>
     <string name="Buzzer">Gameshow buzzer Mode</string>
     <string name="Stat">Statistics</string>
 </resources>

@@ -2,26 +2,36 @@ package com.example.michaelxi.reactiontimer;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+//fetched from http://www.androidbegin.com/tutorial/android-button-click-new-activity-example/
+import android.app.Activity;
+import android.content.Intent;
 import android.view.Menu;
 import android.view.MenuItem;
+//fetched from http://www.androidbegin.com/tutorial/android-button-click-new-activity-example/
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.widget.Button;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends Activity{
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        //fetched from http://www.androidbegin.com/tutorial/android-button-click-new-activity-example/
+        //locate the button in activity_main.xml
         Button Single= (Button) findViewById(R.id.Single);
 
-        Single.setOnClickListener(
-                new Button.OnClickListener(){
-
-                }
-        );
-
+        //Capture button clicks.
+        Single.setOnClickListener(new Button.OnClickListener() {
+            // Navigating to another activity.
+            public void onClick(View arg0) {
+                //Start single.class
+                Intent myIntent = new Intent(MainActivity.this, single.class);
+                startActivity(myIntent);
+            }
+        });
     }
 
     @Override
