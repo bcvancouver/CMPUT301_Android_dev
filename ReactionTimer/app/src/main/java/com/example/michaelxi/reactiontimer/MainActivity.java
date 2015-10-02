@@ -42,7 +42,7 @@ public class MainActivity extends Activity{
             public void onClick(View arg0) {
                 AlertDialog SinglePrompt= new AlertDialog.Builder(MainActivity.this).create();
                 SinglePrompt.setTitle("Attention");
-                SinglePrompt.setMessage("Plz wait until you see the Click button");
+                SinglePrompt.setMessage("Plz wait until you see the Click button turn green");
                 SinglePrompt.setButton(AlertDialog.BUTTON_NEUTRAL, "Continue",
                         new DialogInterface.OnClickListener(){
                             public void onClick(DialogInterface dialog,int which){

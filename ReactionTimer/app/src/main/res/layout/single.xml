@@ -13,5 +13,16 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="39dp" />
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/clickButton"
+        android:id="@+id/click"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="151dp"
+        android:background="#ffff4444"
+        android:clickable="false" />
+
 
 </RelativeLayout>

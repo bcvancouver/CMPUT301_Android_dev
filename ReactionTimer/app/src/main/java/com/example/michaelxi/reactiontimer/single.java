@@ -8,23 +8,39 @@ The above copyright notice and this permission notice shall be included in all c
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.*/
 
-import android.os.Bundle;
 import android.app.Activity;
-import android.view.Menu;
-import android.view.MenuItem;
-import android.view.View;
-import android.widget.Toast;
-import android.app.AlertDialog;
-import android.content.DialogInterface;
-import android.support.v7.app.ActionBarActivity;
+import android.graphics.Color;
+import android.os.Bundle;
+import android.os.Handler;
+import android.widget.Button;
+
 
 public class Single extends Activity {
+
+    long startTime=0;
+
+    //fetched from http://stackoverflow.com/questions/4597690/android-timer-how
+    Handler timerHandler= new Handler();
+    Runnable timerRunnable= new Runnable() {
+
+        @Override
+        public void run() {
+            Button Click=(Button)findViewById(R.id.click);
+            long millisec=System.currentTimeMillis()-startTime;
+            timerHandler.postDelayed(this, 2000);
+            Click.setBackgroundColor(Color.GREEN);
+        }
+    };
 
     @Override
     public void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         //Get the view from single.xml
         setContentView(R.layout.single);
+
+        startTime=System.currentTimeMillis();
+        timerHandler.postDelayed(timerRunnable, 2000);
+
     }
 
 }
