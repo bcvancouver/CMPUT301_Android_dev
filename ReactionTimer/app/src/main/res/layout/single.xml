@@ -22,7 +22,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="151dp"
         android:background="#ffff4444"
-        android:clickable="false" />
+        android:clickable="true" />
 
 
 </RelativeLayout>
