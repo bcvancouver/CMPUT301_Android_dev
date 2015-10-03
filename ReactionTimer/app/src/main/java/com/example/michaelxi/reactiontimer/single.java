@@ -18,11 +18,14 @@ import android.os.Handler;
 import android.view.View;
 import android.widget.Button;
 
+import java.util.Random;
+
 
 public class Single extends Activity {
 
     long startTime=0;
     long millisec=0;
+    long randomTime=0;
 
     //fetched from http://stackoverflow.com/questions/4597690/android-timer-how
     Handler timerHandler= new Handler();
@@ -35,25 +38,38 @@ public class Single extends Activity {
         };
     };
 
+    public long randomtime(long min, long max){
+        double minf= (double) min;
+        double maxf= (double) max;
+        double randNum = ((maxf-minf)*(Math.random()))+minf;
+        long randomnum;
+        randomnum=(long)randNum;
+        return randomnum;
+    }
+
     @Override
     public void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         //Get the view from single.xml
         setContentView(R.layout.single);
         startTime=System.currentTimeMillis();
-        timerHandler.postDelayed(timerRunnable, 2000);
+        randomTime=randomtime(10, 2000);
+        timerHandler.postDelayed(timerRunnable, randomTime);
         Button Click=(Button)findViewById(R.id.click);
         Click.setOnClickListener(new Button.OnClickListener() {
             public void onClick(View arg0) {
-                if (millisec<2000) {
+                if (millisec<randomTime) {
                     AlertDialog SinglePrompt = new AlertDialog.Builder(Single.this).create();
                     SinglePrompt.setTitle("Warning");
                     SinglePrompt.setMessage("Don't Click too early");
                     SinglePrompt.setButton(AlertDialog.BUTTON_NEUTRAL, "Continue", new DialogInterface.OnClickListener() {
                                 public void onClick(DialogInterface dialog, int which) {
+                                    //Restart single user mode (current activity)
+                                    //Copied from http://stackoverflow.com/questions/1397361/how-do-i-restart-an-android-activity
                                     Intent intent=getIntent();
                                     finish();
                                     startActivity(intent);
+
                                     dialog.dismiss();
                                 }
                             }

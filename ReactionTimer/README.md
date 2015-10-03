@@ -11,3 +11,5 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 Reference
     http://www.androidbegin.com/tutorial/android-button-click-new-activity-example/
     http://stackoverflow.com/questions/26097513/android-simple-alert-dialog
+    http://stackoverflow.com/questions/4597690/android-timer-how
+    http://stackoverflow.com/questions/1397361/how-do-i-restart-an-android-activity
