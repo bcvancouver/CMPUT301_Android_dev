@@ -35,6 +35,7 @@ public class Single extends Activity {
             Button Click=(Button)findViewById(R.id.click);
             millisec=System.currentTimeMillis()-startTime;
             Click.setBackgroundColor(Color.GREEN);
+            startTime=System.currentTimeMillis();
         };
     };
 
@@ -62,7 +63,7 @@ public class Single extends Activity {
                     AlertDialog SinglePrompt = new AlertDialog.Builder(Single.this).create();
                     SinglePrompt.setTitle("Warning");
                     SinglePrompt.setMessage("Don't Click too early");
-                    SinglePrompt.setButton(AlertDialog.BUTTON_NEUTRAL, "Continue", new DialogInterface.OnClickListener() {
+                    SinglePrompt.setButton(AlertDialog.BUTTON_NEUTRAL, "Restart", new DialogInterface.OnClickListener() {
                                 public void onClick(DialogInterface dialog, int which) {
                                     //Restart single user mode (current activity)
                                     //Copied from http://stackoverflow.com/questions/1397361/how-do-i-restart-an-android-activity
@@ -75,7 +76,27 @@ public class Single extends Activity {
                             }
                     );
                     SinglePrompt.show();
+                }else{
+                    millisec=System.currentTimeMillis()-startTime;
+                    AlertDialog SinglePrompt= new AlertDialog.Builder(Single.this).create();
+                    SinglePrompt.setTitle("Your Reaction Time");
+                    Long val = new Long(millisec);
+                    String message = val.toString();
+                    SinglePrompt.setMessage(message +" Milli Second");
+                    SinglePrompt.setButton(AlertDialog.BUTTON_NEUTRAL, "Restart", new DialogInterface.OnClickListener() {
+                                public void onClick(DialogInterface dialog, int which) {
+                                    //Copied from http://stackoverflow.com/questions/1397361/how-do-i-restart-an-android-activity
+                                    Intent intent=getIntent();
+                                    finish();
+                                    startActivity(intent);
+
+                                    dialog.dismiss();
+                                }
+                            }
+                    );
+                    SinglePrompt.show();
                 }
+
             }
         });
     }

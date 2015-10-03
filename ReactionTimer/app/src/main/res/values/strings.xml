@@ -7,5 +7,5 @@
     <string name="SingleUser">Single-User Mode</string>
     <string name="Buzzer">Gameshow buzzer Mode</string>
     <string name="Stat">Statistics</string>
-    <string name="clickButton">Click!</string>
+    <string name="clickButton">Buzz!</string>
 </resources>
