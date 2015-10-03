@@ -82,7 +82,7 @@ public class Single extends Activity {
                     SinglePrompt.setTitle("Your Reaction Time");
                     Long val = new Long(millisec);
                     String message = val.toString();
-                    SinglePrompt.setMessage(message +" Milli Second");
+                    SinglePrompt.setMessage(message +" Millisecond");
                     SinglePrompt.setButton(AlertDialog.BUTTON_NEUTRAL, "Restart", new DialogInterface.OnClickListener() {
                                 public void onClick(DialogInterface dialog, int which) {
                                     //Copied from http://stackoverflow.com/questions/1397361/how-do-i-restart-an-android-activity
