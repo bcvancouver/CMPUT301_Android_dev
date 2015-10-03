@@ -51,6 +51,9 @@ public class Single extends Activity {
                     SinglePrompt.setMessage("Don't Click too early");
                     SinglePrompt.setButton(AlertDialog.BUTTON_NEUTRAL, "Continue", new DialogInterface.OnClickListener() {
                                 public void onClick(DialogInterface dialog, int which) {
+                                    Intent intent=getIntent();
+                                    finish();
+                                    startActivity(intent);
                                     dialog.dismiss();
                                 }
                             }
