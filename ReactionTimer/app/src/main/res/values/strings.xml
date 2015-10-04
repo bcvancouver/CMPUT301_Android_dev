@@ -8,4 +8,9 @@
     <string name="Buzzer">Gameshow buzzer Mode</string>
     <string name="Stat">Statistics</string>
     <string name="clickButton">Buzz!</string>
+    <string name="user_num">How many users do you have?</string>
+    <string name="one">1</string>
+    <string name="two">2</string>
+    <string name="three">3</string>
+    <string name="four">4</string>
 </resources>

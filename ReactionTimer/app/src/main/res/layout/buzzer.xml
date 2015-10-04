@@ -13,4 +13,48 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="39dp" />
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/user_num"
+        android:id="@+id/textView"
+        android:layout_marginTop="56dp"
+        android:layout_below="@+id/Buzzer"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/two"
+        android:id="@+id/twoPlayers"
+        android:layout_below="@+id/textView"
+        android:layout_gravity="right"
+        android:layout_alignStart="@+id/textView"
+        android:layout_alignEnd="@+id/textView" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/three"
+        android:id="@+id/threePlayers"
+        android:layout_gravity="right"
+        android:layout_below="@+id/twoPlayers"
+        android:layout_alignStart="@+id/twoPlayers"
+        android:layout_alignEnd="@+id/twoPlayers" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/four"
+        android:id="@+id/fourPlayers"
+        android:layout_gravity="right"
+        android:layout_below="@+id/threePlayers"
+        android:layout_alignStart="@+id/threePlayers"
+        android:layout_alignEnd="@+id/threePlayers"
+        android:clickable="true" />
+
 </RelativeLayout>

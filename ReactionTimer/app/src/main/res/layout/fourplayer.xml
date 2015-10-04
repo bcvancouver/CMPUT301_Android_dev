@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1">
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="112dp"
+        android:text="@string/one"
+        android:id="@+id/playerOne"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        android:layout_weight="0.01" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="121dp"
+        android:text="@string/two"
+        android:id="@+id/playerTwo"
+        android:layout_gravity="center_horizontal"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        android:layout_weight="0.09" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:text="@string/three"
+        android:id="@+id/playerThree"
+        android:layout_weight="0.87"
+        android:textSize="40sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="118dp"
+        android:text="@string/four"
+        android:id="@+id/playerFour"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        android:layout_weight="0.07" />
+</LinearLayout>
