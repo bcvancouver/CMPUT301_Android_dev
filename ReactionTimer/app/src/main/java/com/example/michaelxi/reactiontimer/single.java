@@ -18,6 +18,9 @@ import android.os.Handler;
 import android.view.View;
 import android.widget.Button;
 
+import org.json.JSONArray;
+import org.json.JSONObject;
+
 import java.util.Random;
 
 
@@ -26,6 +29,8 @@ public class Single extends Activity {
     long startTime=0;
     long millisec=0;
     long randomTime=0;
+
+    JSONArray single_record= new JSONArray();
 
     //fetched from http://stackoverflow.com/questions/4597690/android-timer-how
     Handler timerHandler= new Handler();
@@ -81,6 +86,7 @@ public class Single extends Activity {
                     AlertDialog SinglePrompt= new AlertDialog.Builder(Single.this).create();
                     SinglePrompt.setTitle("Your Reaction Time");
                     Long val = new Long(millisec);
+                    single_record.put(val);
                     String message = val.toString();
                     SinglePrompt.setMessage(message +" Millisecond");
                     SinglePrompt.setButton(AlertDialog.BUTTON_NEUTRAL, "Restart", new DialogInterface.OnClickListener() {
