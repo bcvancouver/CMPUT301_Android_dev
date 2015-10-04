@@ -21,8 +21,17 @@ import android.widget.Button;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
+import java.io.BufferedReader;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
 import java.util.Random;
 
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
 
 public class Single extends Activity {
 
@@ -30,7 +39,8 @@ public class Single extends Activity {
     long millisec=0;
     long randomTime=0;
 
-    JSONArray single_record= new JSONArray();
+    Record record= new Record();
+    private static final String FILENAME="file.sav";
 
     //fetched from http://stackoverflow.com/questions/4597690/android-timer-how
     Handler timerHandler= new Handler();
@@ -52,10 +62,48 @@ public class Single extends Activity {
         randomnum=(long)randNum;
         return randomnum;
     }
+    //Followed lonelyTwitter example.
+    @Override
+    protected  void onStart(){
+        super.onStart();
+        loadFromFile();
+        if (record==null){
+            throw new RuntimeException();
+        }
+    }
 
+    private void loadFromFile(){
+        try{
+            FileInputStream fis=openFileInput(FILENAME);
+            BufferedReader in=new BufferedReader(new InputStreamReader(fis));
+            Gson gson=new Gson();
+            record=gson.fromJson(in,record.getClass());
+        }catch (FileNotFoundException e){
+
+        }catch (IOException e){
+            throw new RuntimeException(e);
+        }
+    }
+
+    private  void saveInFile(){
+        try{
+            FileOutputStream fos=openFileOutput(FILENAME, 0);
+            OutputStreamWriter writer=new OutputStreamWriter(fos);
+            Gson gson=new Gson();
+            gson.toJson(record,writer);
+            writer.flush();
+            fos.close();
+        } catch (FileNotFoundException e){
+            throw new RuntimeException(e);
+        } catch (IOException e){
+            throw new RuntimeException(e);
+        }
+    }
     @Override
     public void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
+
+
         //Get the view from single.xml
         setContentView(R.layout.single);
         startTime=System.currentTimeMillis();
@@ -64,7 +112,7 @@ public class Single extends Activity {
         Button Click=(Button)findViewById(R.id.click);
         Click.setOnClickListener(new Button.OnClickListener() {
             public void onClick(View arg0) {
-                if (millisec<randomTime) {
+                if (millisec < randomTime) {
                     AlertDialog SinglePrompt = new AlertDialog.Builder(Single.this).create();
                     SinglePrompt.setTitle("Warning");
                     SinglePrompt.setMessage("Don't Click too early");
@@ -72,7 +120,7 @@ public class Single extends Activity {
                                 public void onClick(DialogInterface dialog, int which) {
                                     //Restart single user mode (current activity)
                                     //Copied from http://stackoverflow.com/questions/1397361/how-do-i-restart-an-android-activity
-                                    Intent intent=getIntent();
+                                    Intent intent = getIntent();
                                     finish();
                                     startActivity(intent);
 
@@ -81,18 +129,19 @@ public class Single extends Activity {
                             }
                     );
                     SinglePrompt.show();
-                }else{
-                    millisec=System.currentTimeMillis()-startTime;
-                    AlertDialog SinglePrompt= new AlertDialog.Builder(Single.this).create();
+                } else {
+                    millisec = System.currentTimeMillis() - startTime;
+                    AlertDialog SinglePrompt = new AlertDialog.Builder(Single.this).create();
                     SinglePrompt.setTitle("Your Reaction Time");
                     Long val = new Long(millisec);
-                    single_record.put(val);
+                    record.setSingle(val);
+                    saveInFile();
                     String message = val.toString();
-                    SinglePrompt.setMessage(message +" Millisecond");
+                    SinglePrompt.setMessage(message + " Millisecond");
                     SinglePrompt.setButton(AlertDialog.BUTTON_NEUTRAL, "Restart", new DialogInterface.OnClickListener() {
                                 public void onClick(DialogInterface dialog, int which) {
                                     //Copied from http://stackoverflow.com/questions/1397361/how-do-i-restart-an-android-activity
-                                    Intent intent=getIntent();
+                                    Intent intent = getIntent();
                                     finish();
                                     startActivity(intent);
 
@@ -106,5 +155,7 @@ public class Single extends Activity {
             }
         });
     }
+
+
 
 }
