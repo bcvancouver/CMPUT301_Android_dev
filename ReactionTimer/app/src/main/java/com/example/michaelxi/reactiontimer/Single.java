@@ -152,7 +152,4 @@ public class Single extends Activity {
             }
         });
     }
-
-
-
 }

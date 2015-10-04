@@ -9,16 +9,15 @@
         android:layout_height="159dp"
         android:text="@string/one"
         android:id="@+id/playerOne"
-        android:layout_weight="0.62"
+        android:layout_weight="0.02"
         android:textSize="60sp"
         android:textStyle="bold" />
 
     <Button
         android:layout_width="match_parent"
-        android:layout_height="168dp"
+        android:layout_height="161dp"
         android:text="@string/two"
         android:id="@+id/playerTwo"
-        android:layout_weight="0.44"
         android:textSize="60sp"
         android:textStyle="bold" />
 

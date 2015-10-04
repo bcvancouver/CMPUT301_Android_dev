@@ -15,7 +15,7 @@
 
     <Button
         android:layout_width="match_parent"
-        android:layout_height="121dp"
+        android:layout_height="118dp"
         android:text="@string/two"
         android:id="@+id/playerTwo"
         android:layout_gravity="center_horizontal"
@@ -28,7 +28,7 @@
         android:layout_height="0dp"
         android:text="@string/three"
         android:id="@+id/playerThree"
-        android:layout_weight="0.87"
+        android:layout_weight="0.75"
         android:textSize="40sp"
         android:textStyle="bold" />
 
