@@ -13,11 +13,13 @@ Video Demo:
 
 Reference:
         http://www.androidbegin.com/tutorial/android-button-click-new-activity-example/
+        
     Stackoverflow:
         http://stackoverflow.com/questions/26097513/android-simple-alert-dialog
         http://stackoverflow.com/questions/4597690/android-timer-how
         http://stackoverflow.com/questions/1397361/how-do-i-restart-an-android-activity
         http://stackoverflow.com/questions/26097513/android-simple-alert-dialog
+        
     Tutorialpoints:
         http://www.tutorialspoint.com/java/util/collections_min_comparator.htm
         http://www.tutorialspoint.com/java/java_arraylist_class.htm
