@@ -2,39 +2,39 @@
 <items version="2" >
 
     <item
-        jar="/Users/michaelxi/CMPUT301_Android_dev/ReactionTimer/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/jars/classes.jar"
+        jar="/Users/michaelxi/Reaction_Timer/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.0.1/jars/classes.jar"
         jumboMode="false"
         revision="23.0.1"
-        sha1="d86429b0f0b3f3cafbeb78dda1b9d89119ccb05d">
-        <dex dex="/Users/michaelxi/CMPUT301_Android_dev/ReactionTimer/app/build/intermediates/pre-dexed/debug/classes-c782cc615194499a42be43f11c1e2b7aed1ae9c9.jar" />
-    </item>
-    <item
-        jar="/Users/michaelxi/CMPUT301_Android_dev/ReactionTimer/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.0.1/jars/libs/internal_impl-23.0.1.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="aa92916125166649d8ad4ba3940c3dd7515596d3">
-        <dex dex="/Users/michaelxi/CMPUT301_Android_dev/ReactionTimer/app/build/intermediates/pre-dexed/debug/internal_impl-23.0.1-f9e77c62e9c7b2091c4fc4f1f78ca6717636a6c8.jar" />
+        sha1="c31e21b53ff2f74664e498248d01453a32e32d48">
+        <dex dex="/Users/michaelxi/Reaction_Timer/app/build/intermediates/pre-dexed/debug/classes-925660652d5a8c0d240eb461dc03d460fbca8fa9.jar" />
     </item>
     <item
         jar="/Users/michaelxi/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/23.0.1/support-annotations-23.0.1.jar"
         jumboMode="false"
         revision="23.0.1"
         sha1="1fce89a6428c51467090d7f424e4c9c3dbd55f7e">
-        <dex dex="/Users/michaelxi/CMPUT301_Android_dev/ReactionTimer/app/build/intermediates/pre-dexed/debug/support-annotations-23.0.1-960186cec7da6a209ac0139f7300cfc226872e42.jar" />
+        <dex dex="/Users/michaelxi/Reaction_Timer/app/build/intermediates/pre-dexed/debug/support-annotations-23.0.1-960186cec7da6a209ac0139f7300cfc226872e42.jar" />
     </item>
     <item
         jar="/Users/michaelxi/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.3.1/ecb6e1f8e4b0e84c4b886c2f14a1500caf309757/gson-2.3.1.jar"
         jumboMode="false"
         revision="23.0.1"
         sha1="ecb6e1f8e4b0e84c4b886c2f14a1500caf309757">
-        <dex dex="/Users/michaelxi/CMPUT301_Android_dev/ReactionTimer/app/build/intermediates/pre-dexed/debug/gson-2.3.1-0b5c84173188c57c572ef592ca0f5e5b06766dc9.jar" />
+        <dex dex="/Users/michaelxi/Reaction_Timer/app/build/intermediates/pre-dexed/debug/gson-2.3.1-0b5c84173188c57c572ef592ca0f5e5b06766dc9.jar" />
     </item>
     <item
-        jar="/Users/michaelxi/CMPUT301_Android_dev/ReactionTimer/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.0.1/jars/classes.jar"
+        jar="/Users/michaelxi/Reaction_Timer/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.0.1/jars/libs/internal_impl-23.0.1.jar"
         jumboMode="false"
         revision="23.0.1"
-        sha1="c31e21b53ff2f74664e498248d01453a32e32d48">
-        <dex dex="/Users/michaelxi/CMPUT301_Android_dev/ReactionTimer/app/build/intermediates/pre-dexed/debug/classes-0c03da7a196974aeb39a23b5c69cc266ee805026.jar" />
+        sha1="aa92916125166649d8ad4ba3940c3dd7515596d3">
+        <dex dex="/Users/michaelxi/Reaction_Timer/app/build/intermediates/pre-dexed/debug/internal_impl-23.0.1-aaa0e5af1d93a07a19b3eea8bb4a4e98d92d629d.jar" />
+    </item>
+    <item
+        jar="/Users/michaelxi/Reaction_Timer/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="d86429b0f0b3f3cafbeb78dda1b9d89119ccb05d">
+        <dex dex="/Users/michaelxi/Reaction_Timer/app/build/intermediates/pre-dexed/debug/classes-92f321fc6743e6dadc9e363e7eb10a3904471cca.jar" />
     </item>
 
 </items>

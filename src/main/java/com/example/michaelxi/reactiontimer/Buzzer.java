@@ -19,9 +19,6 @@ import android.widget.Button;
 
 public class Buzzer extends Activity{
 
-    //Button threeplayer=(Button)findViewById(R.id.threePlayers);
-    //Button fourplayer=(Button)findViewById(R.id.fourPlayers);
-
     @Override
     public void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
