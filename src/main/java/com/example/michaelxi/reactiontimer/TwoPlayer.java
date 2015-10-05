@@ -73,12 +73,11 @@ public class TwoPlayer extends Activity{
     @Override
     public void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
-        //Get the view from twoplayer.xml
+        //Load layout from twoplayer.xml
         setContentView(R.layout.twoplayer);
 
         Button player1=(Button) findViewById(R.id.playerOne);
         Button player2=(Button) findViewById(R.id.playerTwo);
-
 
 
         player1.setOnClickListener(new Button.OnClickListener() {

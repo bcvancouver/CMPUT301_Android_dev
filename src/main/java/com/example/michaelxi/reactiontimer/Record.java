@@ -17,39 +17,47 @@ import java.util.Collections;
  * Created by michaelximac on 2015-10-04.
  */
 public class Record {
+    //single-mode record is stored below
     ArrayList<Long> single= new ArrayList<Long>();
+    //double-player mode record in the ArrayList below
     ArrayList<Integer> TwoPlayer= new ArrayList<>(Arrays.asList(0, 0));
+    //triple-player mode record in the ArrayList below
     ArrayList<Integer> ThreePlayer= new ArrayList<>(Arrays.asList(0, 0, 0));
+    //four-player mode record in the ArrayList below
     ArrayList<Integer> FourPlayer= new ArrayList<>(Arrays.asList(0, 0, 0, 0));
 
+    //method of adding new reaction time
     public void setSingle(Long single) {
         this.single.add(single);
     }
 
-    public Integer getTwoPlayer(int index) {
-        return TwoPlayer.get(index);
-    }
-
+    //method of recording buzz times
     public void setTwoPlayer(int index) {
         TwoPlayer.set(index, TwoPlayer.get(index)+1);
-    }
-
-    public Integer getThreePlayer(int index) {
-        return ThreePlayer.get(index);
     }
 
     public void setThreePlayer(int index) {
         ThreePlayer.set(index, ThreePlayer.get(index)+1);
     }
 
-    public Integer getFourPlayer(int index) {
-        return FourPlayer.get(index);
-    }
-
     public void setFourPlayer(int index) {
         FourPlayer.set(index, FourPlayer.get(index)+1);
     }
 
+    //method of looking up for buzz time record
+    public Integer getTwoPlayer(int index) {
+        return TwoPlayer.get(index);
+    }
+
+    public Integer getThreePlayer(int index) {
+        return ThreePlayer.get(index);
+    }
+
+    public Integer getFourPlayer(int index) {
+        return FourPlayer.get(index);
+    }
+
+    //Calculating minimum reaction time of last 10 or 100 records
     public Long getminresult(ArrayList<Long> single, int limit){
         ArrayList<Long> temp=new ArrayList<Long>();
         if (limit<single.size()){
@@ -65,6 +73,7 @@ public class Record {
         }
     }
 
+    //Calculating maximum reaction time of last 10 or 100 records
     public Long getmaxresult(ArrayList<Long> single, int limit){
         ArrayList<Long> temp=new ArrayList<Long>();
         if (limit<single.size()){
@@ -79,6 +88,7 @@ public class Record {
         }
     }
 
+    //Calculating average reaction time of last 10 or 100 records
     public Long getAverageResult(ArrayList<Long> single,int limit){
         ArrayList<Long> temp=new ArrayList<Long>();
         long sum=0;
@@ -96,6 +106,7 @@ public class Record {
 
     }
 
+    //Calculating median reaction time of last 10 or 100 records
     public Long getMedianResult(ArrayList<Long> single,int limit){
         ArrayList<Long> temp=new ArrayList<Long>();
         if (limit<single.size()){

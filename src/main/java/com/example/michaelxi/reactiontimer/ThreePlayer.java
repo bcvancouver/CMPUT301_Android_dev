@@ -75,7 +75,6 @@ public class ThreePlayer extends Activity {
     @Override
     public void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
-        //Get the view from threeplayer.xml
         setContentView(R.layout.threeplayer);
 
         Button player1=(Button) findViewById(R.id.playerOne);

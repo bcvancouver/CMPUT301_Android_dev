@@ -20,5 +20,6 @@ Reference:
         http://stackoverflow.com/questions/26097513/android-simple-alert-dialog
     Tutorialpoints:
         http://www.tutorialspoint.com/java/util/collections_min_comparator.htm
+        http://www.tutorialspoint.com/java/java_arraylist_class.htm
 
     LonelyTwitter Lab

@@ -53,9 +53,10 @@ public class Stat extends Activity{
         setContentView(R.layout.stat);
         TextView statResult=(TextView)findViewById(R.id.statResult);
         loadFromFile();
+
+        //Clear Data button implementation
         Button Click=(Button)findViewById(R.id.clear);
         Click.setOnClickListener(new Button.OnClickListener() {
-            // Navigating to another activity.
             public void onClick(View arg0) {
                 File dir=getFilesDir();
                 File file=new File(dir,"file.sav");
@@ -66,6 +67,8 @@ public class Stat extends Activity{
             }
         });
 
+        //TextView Implementation
+        //Single Record Stats
         if (record.single.size()!=0){
             statResult.setText("Reaction Time Statistics:");
             statResult.append("\n  Minimum of last 10 reaction times: ");

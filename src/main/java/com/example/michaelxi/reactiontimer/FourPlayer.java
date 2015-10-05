@@ -189,9 +189,7 @@ public class FourPlayer extends Activity {
                             }
                     );
                     SinglePrompt.show();
-
                 }
-
             }
         });
     }
