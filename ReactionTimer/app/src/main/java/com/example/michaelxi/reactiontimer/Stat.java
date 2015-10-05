@@ -37,7 +37,7 @@ public class Stat extends Activity{
             Gson gson=new Gson();
             record=gson.fromJson(in,record.getClass());
         }catch (FileNotFoundException e){
-
+            e.printStackTrace();
         }catch (IOException e){
             throw new RuntimeException(e);
         }
@@ -46,19 +46,19 @@ public class Stat extends Activity{
     public void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         //Get the view from stat.xml
-        loadFromFile();
-        if (record == null){
-            throw new RuntimeException();
-        }
         setContentView(R.layout.stat);
         TextView statResult=(TextView)findViewById(R.id.statResult);
-        statResult.setText("Min of last 10 reaction times: ");
-        Long temptime=record.getminresult(record.single,10);
-        statResult.append(temptime.toString());
-        statResult.append("\nMin of last 100 reaction times: ");
-        temptime=record.getminresult(record.single,100);
-        statResult.append(temptime.toString());
+        loadFromFile();
 
-
+        if (record.single.size()!=0){
+            statResult.setText("Min of last 10 reaction times: ");
+            Long temptime=record.getminresult(record.single,10);
+            statResult.append(temptime.toString());
+            statResult.append("\nMin of last 100 reaction times: ");
+            temptime=record.getminresult(record.single,100);
+            statResult.append(temptime.toString());
+        } else {
+            statResult.setText("Single User record not found. ");
+        }
     }
 }
