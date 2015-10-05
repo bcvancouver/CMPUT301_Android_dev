@@ -96,6 +96,7 @@ public class Single extends Activity {
             throw new RuntimeException(e);
         }
     }
+
     @Override
     public void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
