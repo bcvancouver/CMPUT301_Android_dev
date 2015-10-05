@@ -1,12 +1,16 @@
 package com.example.michaelxi.reactiontimer;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import com.google.gson.Gson;
 
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -49,6 +53,18 @@ public class Stat extends Activity{
         setContentView(R.layout.stat);
         TextView statResult=(TextView)findViewById(R.id.statResult);
         loadFromFile();
+        Button Click=(Button)findViewById(R.id.clear);
+        Click.setOnClickListener(new Button.OnClickListener() {
+            // Navigating to another activity.
+            public void onClick(View arg0) {
+                File dir=getFilesDir();
+                File file=new File(dir,"file.sav");
+                boolean deleted =file.delete();
+                Intent intent = getIntent();
+                finish();
+                startActivity(intent);
+            }
+        });
 
         if (record.single.size()!=0){
             statResult.setText("Reaction Time Statistics:");
