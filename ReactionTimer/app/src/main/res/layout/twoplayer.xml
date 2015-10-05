@@ -5,16 +5,16 @@
 
     <Button
         android:layout_width="match_parent"
-        android:layout_height="243dp"
+        android:layout_height="250dp"
         android:text="@string/one"
         android:id="@+id/playerOne"
-        android:layout_gravity="center_horizontal"
+        android:layout_gravity="center_horizontal|top"
         android:textSize="80sp"
         android:textStyle="bold" />
 
     <Button
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="250dp"
         android:text="@string/two"
         android:id="@+id/playerTwo"
         android:textStyle="bold"

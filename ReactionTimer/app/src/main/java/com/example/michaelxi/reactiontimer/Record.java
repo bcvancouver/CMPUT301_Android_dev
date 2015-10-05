@@ -52,14 +52,61 @@ public class Record {
             for (int i=single.size()-1; i>single.size()-10; i--){
                 temp.add(single.get(i));
             }
-            Collections.sort(temp);
-            return temp.get(0);
+            //Reference: http://www.tutorialspoint.com/java/util/collections_min_comparator.htm
+            Long result=Collections.min(temp);
+            return result;
         }else{
-            for (int i=0;i<single.size();i++){
+            Long result=Collections.min(single);
+            return result;
+        }
+    }
+
+    public Long getmaxresult(ArrayList<Long> single, int limit){
+        ArrayList<Long> temp=new ArrayList<Long>();
+        if (limit<single.size()){
+            for (int i=single.size()-1; i>single.size()-10; i--){
+                temp.add(single.get(i));
+            }
+            Long result=Collections.max(temp);
+            return result;
+        }else{
+            Long result=Collections.max(single);
+            return result;
+        }
+    }
+
+    public Long getAverageResult(ArrayList<Long> single,int limit){
+        ArrayList<Long> temp=new ArrayList<Long>();
+        long sum=0;
+        if (limit<single.size()){
+            for (int i=single.size()-1; i>single.size()-10; i--){
+                sum+=single.get(i);
+            }
+            return sum/limit;
+        }else{
+            for (Long singleTime: single){
+                sum+=singleTime;
+            }
+            return sum/single.size();
+        }
+
+    }
+
+    public Long getMedianResult(ArrayList<Long> single,int limit){
+        ArrayList<Long> temp=new ArrayList<Long>();
+        if (limit<single.size()){
+            for (int i=single.size()-1; i>single.size()-10; i--) {
                 temp.add(single.get(i));
             }
             Collections.sort(temp);
-            return temp.get(0);
+            return temp.get(limit/2);
+        }else{
+            for (Long singleTime: single){
+                temp.add(singleTime);
+            }
+            Collections.sort(temp);
+            return temp.get(temp.size()/2);
         }
+
     }
 }

@@ -51,14 +51,36 @@ public class Stat extends Activity{
         loadFromFile();
 
         if (record.single.size()!=0){
-            statResult.setText("Min of last 10 reaction times: ");
+            statResult.setText("Reaction Time Statistics:");
+            statResult.append("\n  Minimum of last 10 reaction times: ");
             Long temptime=record.getminresult(record.single,10);
             statResult.append(temptime.toString());
-            statResult.append("\nMin of last 100 reaction times: ");
+            statResult.append(" miliseconds\n  Minmum of last 100 reaction times: ");
             temptime=record.getminresult(record.single,100);
             statResult.append(temptime.toString());
+            statResult.append(" miliseconds\n  Maximum of last 10 reaction times: ");
+            temptime=record.getmaxresult(record.single,10);
+            statResult.append(temptime.toString());
+            statResult.append(" miliseconds\n  Maximum of last 100 reaction times: ");
+            temptime=record.getmaxresult(record.single,100);
+            statResult.append(temptime.toString());
+            statResult.append(" miliseconds\n  Average of last 10 reaction times: ");
+            temptime=record.getAverageResult(record.single,10);
+            statResult.append(temptime.toString());
+            statResult.append(" miliseconds\n  Average of last 100 reaction times: ");
+            temptime=record.getAverageResult(record.single,100);
+            statResult.append(temptime.toString());
+            statResult.append(" miliseconds\n  Median of last 10 reaction times: ");
+            temptime=record.getMedianResult(record.single,10);
+            statResult.append(temptime.toString());
+            statResult.append(" miliseconds\n  Median of last 100 reaction times: ");
+            temptime=record.getMedianResult(record.single,100);
+            statResult.append(temptime.toString());
+            statResult.append(" miliseconds\n");
+
+
         } else {
-            statResult.setText("Single User record not found. ");
+            statResult.setText("  Single User record not found. ");
         }
     }
 }
