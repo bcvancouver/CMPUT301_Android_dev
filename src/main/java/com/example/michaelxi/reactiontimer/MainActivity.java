@@ -8,7 +8,6 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 package com.example.michaelxi.reactiontimer;
 
-//import android.support.v7.app.AppCompatActivity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.os.Bundle;
@@ -19,7 +18,6 @@ import android.view.Menu;
 import android.view.MenuItem;
 //fetched from http://www.androidbegin.com/tutorial/android-button-click-new-activity-example/
 import android.view.View;
-//import android.view.View.OnClickListener;
 import android.widget.Button;
 
 public class MainActivity extends Activity{
