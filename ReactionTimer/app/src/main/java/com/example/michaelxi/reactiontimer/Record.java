@@ -1,13 +1,15 @@
 package com.example.michaelxi.reactiontimer;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 
 /**
  * Created by michaelximac on 2015-10-04.
  */
 public class Record {
-    ArrayList <Long> single= new ArrayList<Long>();
+    ArrayList<Long> single= new ArrayList<Long>();
     ArrayList<Integer> TwoPlayer= new ArrayList<>(Arrays.asList(0, 0));
     ArrayList<Integer> ThreePlayer= new ArrayList<>(Arrays.asList(0, 0, 0));
     ArrayList<Integer> FourPlayer= new ArrayList<>(Arrays.asList(0, 0, 0, 0));
@@ -44,4 +46,20 @@ public class Record {
         FourPlayer.set(index, FourPlayer.get(index)+1);
     }
 
+    public Long getminresult(ArrayList<Long> single, int limit){
+        ArrayList<Long> temp=new ArrayList<Long>();
+        if (limit<single.size()){
+            for (int i=single.size()-1; i>single.size()-10; i--){
+                temp.add(single.get(i));
+            }
+            Collections.sort(temp);
+            return temp.get(0);
+        }else{
+            for (int i=0;i<single.size();i++){
+                temp.add(single.get(i));
+            }
+            Collections.sort(temp);
+            return temp.get(0);
+        }
+    }
 }
