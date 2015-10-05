@@ -82,5 +82,32 @@ public class Stat extends Activity{
         } else {
             statResult.setText("  Single User record not found. ");
         }
+
+        //Buzzer Count Stats
+        statResult.append("\nBuzzer Counts:\n");
+        if (record.TwoPlayer.size()!=0){
+            statResult.append("  2 Players:\n    Player 1 Buzzes: "+record.getTwoPlayer(0).toString());
+            statResult.append("\n    Player 2 Buzzes: " + record.getTwoPlayer(1).toString()+"\n");
+        } else {
+            statResult.append("  Record not found. ");
+        }
+
+        if (record.ThreePlayer.size()!=0){
+            statResult.append("  3 Players:\n    Player 1 Buzzes: "+record.getThreePlayer(0).toString());
+            statResult.append("\n    Player 2 Buzzes: " + record.getThreePlayer(1).toString()+"\n");
+            statResult.append("    Player 3 Buzzes: " + record.getThreePlayer(2).toString()+"\n");
+
+        }else{
+            statResult.append("  Record not found. ");
+        }
+
+        if (record.FourPlayer.size()!=0){
+            statResult.append("  4 Players:\n    Player 1 Buzzes: "+record.getFourPlayer(0).toString());
+            statResult.append("\n    Player 2 Buzzes: " + record.getFourPlayer(1).toString()+"\n");
+            statResult.append("    Player 3 Buzzes: " + record.getFourPlayer(2).toString()+"\n");
+            statResult.append("    Player 4 Buzzes: " + record.getFourPlayer(3).toString()+"\n");
+        }else{
+            statResult.append("  Record not found. ");
+        }
     }
 }

@@ -14,32 +14,28 @@ public class Record {
     ArrayList<Integer> ThreePlayer= new ArrayList<>(Arrays.asList(0, 0, 0));
     ArrayList<Integer> FourPlayer= new ArrayList<>(Arrays.asList(0, 0, 0, 0));
 
-    public ArrayList<Long> getSingle() {
-        return single;
-    }
-
     public void setSingle(Long single) {
         this.single.add(single);
     }
 
-    public ArrayList<Integer> getTwoPlayer() {
-        return TwoPlayer;
+    public Integer getTwoPlayer(int index) {
+        return TwoPlayer.get(index);
     }
 
     public void setTwoPlayer(int index) {
         TwoPlayer.set(index, TwoPlayer.get(index)+1);
     }
 
-    public ArrayList<Integer> getThreePlayer() {
-        return ThreePlayer;
+    public Integer getThreePlayer(int index) {
+        return ThreePlayer.get(index);
     }
 
     public void setThreePlayer(int index) {
         ThreePlayer.set(index, ThreePlayer.get(index)+1);
     }
 
-    public ArrayList<Integer> getFourPlayer() {
-        return FourPlayer;
+    public Integer getFourPlayer(int index) {
+        return FourPlayer.get(index);
     }
 
     public void setFourPlayer(int index) {
